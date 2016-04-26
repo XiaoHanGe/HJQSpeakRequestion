@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2et-Op-1QH">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58q-IT-K4R">
+                                <rect key="frame" x="130" y="204" width="60" height="30"/>
+                                <state key="normal" title="语音听写"/>
+                                <connections>
+                                    <segue destination="m5w-Qf-K1u" kind="show" id="vML-Wp-d5j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UIT-U6-bbG"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="362"/>
+        </scene>
+        <!--语音听写-->
+        <scene sceneID="dt5-fX-7mX">
+            <objects>
+                <viewController id="m5w-Qf-K1u" customClass="IATViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cvF-ha-Hgf"/>
+                        <viewControllerLayoutGuide type="bottom" id="J76-P3-L0g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LwU-QF-jEu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZl-IE-5AK">
+                                <rect key="frame" x="221" y="292" width="94" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="SWT-oy-bun"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="取消">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnHandler:" destination="m5w-Qf-K1u" eventType="touchUpInside" id="hik-3E-iRH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBl-3X-Vpg" userLabel="开始识别">
+                                <rect key="frame" x="5" y="292" width="94" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="iN0-Kh-CDd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="开始识别">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBtnHandler:" destination="m5w-Qf-K1u" eventType="touchUpInside" id="8DK-kH-tBs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rL-bJ-5qo">
+                                <rect key="frame" x="114" y="292" width="93" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="IIT-xF-v2q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="停止">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopBtnHandler:" destination="m5w-Qf-K1u" eventType="touchUpInside" id="l4h-Ky-djd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhp-ti-xss">
+                                <rect key="frame" x="5" y="100" width="310" height="169"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZBl-3X-Vpg" secondAttribute="bottom" constant="227" id="2D6-n5-sqB"/>
+                            <constraint firstItem="Mhp-ti-xss" firstAttribute="leading" secondItem="LwU-QF-jEu" secondAttribute="leading" constant="5" id="5g1-UD-AH9"/>
+                            <constraint firstAttribute="trailing" secondItem="Mhp-ti-xss" secondAttribute="trailing" constant="5" id="6uI-ME-eVk"/>
+                            <constraint firstAttribute="bottom" secondItem="5rL-bJ-5qo" secondAttribute="bottom" constant="227" id="EWc-5m-9oz"/>
+                            <constraint firstAttribute="bottom" secondItem="mZl-IE-5AK" secondAttribute="bottom" constant="227" id="FHb-C6-0Ic"/>
+                            <constraint firstAttribute="trailing" secondItem="mZl-IE-5AK" secondAttribute="trailing" constant="5" id="GCx-Fu-J6D"/>
+                            <constraint firstItem="mZl-IE-5AK" firstAttribute="leading" secondItem="5rL-bJ-5qo" secondAttribute="trailing" constant="14" id="HVM-jR-Aoh"/>
+                            <constraint firstItem="Mhp-ti-xss" firstAttribute="top" secondItem="LwU-QF-jEu" secondAttribute="top" constant="100" id="OYE-Gq-IbI"/>
+                            <constraint firstItem="ZBl-3X-Vpg" firstAttribute="width" secondItem="5rL-bJ-5qo" secondAttribute="width" id="PQg-C6-f6K"/>
+                            <constraint firstItem="5rL-bJ-5qo" firstAttribute="leading" secondItem="ZBl-3X-Vpg" secondAttribute="trailing" constant="15" id="hCE-IW-Mkd"/>
+                            <constraint firstItem="5rL-bJ-5qo" firstAttribute="top" secondItem="Mhp-ti-xss" secondAttribute="bottom" constant="23" id="im1-Lo-xR8"/>
+                            <constraint firstItem="ZBl-3X-Vpg" firstAttribute="leading" secondItem="LwU-QF-jEu" secondAttribute="leading" constant="5" id="jMS-DB-Vkv"/>
+                            <constraint firstItem="mZl-IE-5AK" firstAttribute="width" secondItem="5rL-bJ-5qo" secondAttribute="width" id="oE5-S4-yxm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="语音听写" id="uoX-cz-G0u">
+                        <barButtonItem key="rightBarButtonItem" title="设置" id="RA4-1p-7Y1"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cancelRecBtn" destination="mZl-IE-5AK" id="ga8-xq-UBZ"/>
+                        <outlet property="settingBtn" destination="RA4-1p-7Y1" id="e4k-dQ-7y7"/>
+                        <outlet property="startRecBtn" destination="ZBl-3X-Vpg" id="fQo-VD-pLc"/>
+                        <outlet property="stopRecBtn" destination="5rL-bJ-5qo" id="0XH-H3-zyC"/>
+                        <outlet property="textView" destination="Mhp-ti-xss" id="Qvk-SM-nIV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCO-xR-QWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1859" y="362"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="42z-Vc-C0v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2et-Op-1QH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k0z-jc-0ih">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xZX-9W-8EV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3V-oz-q8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="362"/>
+        </scene>
+    </scenes>
+</document>
