@@ -12,11 +12,44 @@
 #import "PopupView.h"
 #import "ISRDataHelper.h"
 #import "IATConfig.h"
-
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define NAME        @"userwords"
 #define USERWORDS   @"{\"userword\":[{\"name\":\"我的常用词\",\"words\":[\"佳晨实业\",\"蜀南庭苑\",\"高兰路\",\"复联二\"]},{\"name\":\"我的好友\",\"words\":[\"李馨琪\",\"鹿晓雷\",\"张集栋\",\"周家莉\",\"叶震珂\",\"熊泽萌\"]}]}"
 
 @interface IATViewController ()
+{
+    UIView *tmpView; // 背景大view
+    UILabel *tmpLabel;
+    UIImageView *voiceImageStr; //按住提示
+    // 动画相关实例
+    CALayer *_layer;
+    CAAnimationGroup *_animaTionGroup;
+    CADisplayLink *_disPlayLink;
+    
+}
+// 录音按钮相关
+@property (weak, nonatomic) IBOutlet UIButton *starSpeckButton;// 说话按钮
+
+/**
+ *  当录音按钮被按下所触发的事件，这时候是开始录音
+ */
+- (void)holdDownButtonTouchDown;
+
+/**
+ *  当手指在录音按钮范围之外离开屏幕所触发的事件，这时候是取消录音
+ */
+- (void)holdDownButtonTouchUpOutside;
+
+/**
+ *  当手指在录音按钮范围之内离开屏幕所触发的事件，这时候是完成录音
+ */
+- (void)holdDownButtonTouchUpInside;
+
+/**
+ *  当手指滑动到录音按钮的范围之外所触发的事件
+ */
+//- (void)holdDownDragOutside;
 
 @end
 
@@ -25,12 +58,24 @@
 #pragma mark - 视图生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+    [_starSpeckButton addTarget:self action:@selector(holdDownButtonTouchDown) forControlEvents:UIControlEventTouchDown];
+    [_starSpeckButton addTarget:self action:@selector(holdDownButtonTouchUpOutside) forControlEvents:UIControlEventTouchUpOutside];
+    [_starSpeckButton addTarget:self action:@selector(holdDownButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
+//    [_starSpeckButton addTarget:self action:@selector(holdDownDragOutside) forControlEvents:UIControlEventTouchDragExit];
+//    [_starSpeckButton addTarget:self action:@selector(holdDownDragInside) forControlEvents:UIControlEventTouchDragEnter];
+    
+    // "按住说话－松开搜索"提示
+    [voiceImageStr removeFromSuperview];
+    voiceImageStr = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth/2 - 40, kScreenHeight - 170, 80, 33)];
+    voiceImageStr.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"speck"]];
+    [self.view addSubview:voiceImageStr];
 
     _textView.layer.borderWidth = 0.5f;
     _textView.layer.borderColor = [[UIColor whiteColor] CGColor];
     [_textView.layer setCornerRadius:7.0f];
     
-    CGFloat posY = self.textView.frame.origin.y+self.textView.frame.size.height/6;
+    CGFloat posY = self.textView.frame.origin.y+self.textView.frame.size.height/6 + 80;
     _popUpView = [[PopupView alloc] initWithFrame:CGRectMake(100, posY, 0, 0) withParentView:self.view];
     
     self.uploader = [[IFlyDataUploader alloc] init];
@@ -41,15 +86,67 @@
     _pcmFilePath = [[NSString alloc] initWithFormat:@"%@",[cachePath stringByAppendingPathComponent:@"asr.pcm"]];
 }
 
+#pragma mark ------ 关于按钮操作的一些事情-------
+- (void)holdDownButtonTouchDown {
+
+    [_starSpeckButton setImage:[UIImage imageNamed:@"Oval"] forState:UIControlStateHighlighted];
+    // 开始动画
+    _disPlayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(delayAnimation)];
+    _disPlayLink.frameInterval = 40;
+    [_disPlayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    // 开始说话
+    [self startBtnHandler];
+  
+    // "按住说话－松开搜索"提示
+    [voiceImageStr removeFromSuperview];
+    voiceImageStr = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth/2 - 40, kScreenHeight - 170, 80, 33)];
+    voiceImageStr.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"searchVoice"]];
+    [self.view addSubview:voiceImageStr];
+    
+}
+
+- (void)holdDownButtonTouchUpOutside {
+    [_starSpeckButton setBackgroundImage:[UIImage imageNamed:@"client"] forState:UIControlStateNormal];
+ 
+    // 结束动画
+    [self.view.layer removeAllAnimations];
+    [_disPlayLink invalidate];
+    _disPlayLink = nil;
+    
+    // 取消录音
+    [self cancelBtnHandler];
+    // "按住说话－松开搜索"提示
+    [voiceImageStr removeFromSuperview];
+    voiceImageStr = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth/2 - 40, kScreenHeight - 170, 80, 33)];
+    voiceImageStr.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"speck"]];
+    [self.view addSubview:voiceImageStr];
+}
+
+- (void)holdDownButtonTouchUpInside {
+    [_starSpeckButton setBackgroundImage:[UIImage imageNamed:@"client"] forState:UIControlStateNormal];
+    
+    // 结束动画
+    [self.view.layer removeAllAnimations];
+    [_disPlayLink invalidate];
+    _disPlayLink = nil;
+    
+    // 完成录音
+    [self stopBtnHandler];
+    // "按住说话－松开搜索"提示
+    [voiceImageStr removeFromSuperview];
+    voiceImageStr = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth/2 - 40, kScreenHeight - 170, 80, 33)];
+    voiceImageStr.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"speck"]];
+    [self.view addSubview:voiceImageStr];
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);
     
     [super viewWillAppear:animated];
     
     [self initRecognizer];//初始化识别对象
-    
-    [_startRecBtn setEnabled:YES];
 }
 
 - (void)viewDidUnload
@@ -60,7 +157,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);
     
     if ([IATConfig sharedInstance].haveView == NO) {//无界面
         [_iFlySpeechRecognizer cancel]; //取消识别
@@ -77,11 +174,11 @@
     
     [super viewWillDisappear:animated];
 }
+
 -(void)dealloc
 {
     
 }
-
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -90,14 +187,14 @@
 }
 
 
-#pragma mark - 按钮响应函数
 
+#pragma mark - 按钮响应函数
 /**
  启动听写
  *****/
-- (IBAction)startBtnHandler:(id)sender {
+- (void)startBtnHandler{
     
-    NSLog(@"%s[IN]",__func__);
+//    NSLog(@"%s[IN]",__func__);
     
     if ([IATConfig sharedInstance].haveView == NO) {//无界面
         
@@ -126,9 +223,7 @@
         BOOL ret = [_iFlySpeechRecognizer startListening];
         
         if (ret) {
-            //            [_audioStreamBtn setEnabled:NO];
-            //            [_upWordListBtn setEnabled:NO];
-            //            [_upContactBtn setEnabled:NO];
+
         }else{
             [_popUpView showText: @"启动识别服务失败，请稍后重试"];//可能是上次请求未结束，暂不支持多路并发
         }
@@ -153,13 +248,12 @@
         
         [_iflyRecognizerView start];
     }
-    
 }
 
 /**
  停止录音
  *****/
-- (IBAction)stopBtnHandler:(id)sender {
+- (void)stopBtnHandler{
     
     [_iFlySpeechRecognizer stopListening];
     [_textView resignFirstResponder];
@@ -168,7 +262,7 @@
 /**
  取消听写
  *****/
-- (IBAction)cancelBtnHandler:(id)sender {
+- (void)cancelBtnHandler{
     self.isCanceled = YES;
     
     [_iFlySpeechRecognizer cancel];
@@ -176,8 +270,6 @@
     [_popUpView removeFromSuperview];
     [_textView resignFirstResponder];
 }
-
-
 
 #pragma mark - IFlySpeechRecognizerDelegate
 
@@ -203,7 +295,7 @@
  ****/
 - (void) onBeginOfSpeech
 {
-    NSLog(@"onBeginOfSpeech");
+//    NSLog(@"onBeginOfSpeech");
     [_popUpView showText: @"正在录音"];
 }
 
@@ -212,7 +304,7 @@
  ****/
 - (void) onEndOfSpeech
 {
-    NSLog(@"onEndOfSpeech");
+//    NSLog(@"onEndOfSpeech");
     
     [_popUpView showText: @"停止录音"];
 }
@@ -226,7 +318,7 @@
  ****/
 - (void) onError:(IFlySpeechError *) error
 {
-    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);
     
     if ([IATConfig sharedInstance].haveView == NO ) {
         NSString *text ;
@@ -242,20 +334,15 @@
             }
         }else {
             text = [NSString stringWithFormat:@"发生错误：%d %@", error.errorCode,error.errorDesc];
-            NSLog(@"%@",text);
+//            NSLog(@"%@",text);
         }
         
         [_popUpView showText: text];
         
     }else {
         [_popUpView showText:@"识别结束"];
-        NSLog(@"errorCode:%d",[error errorCode]);
+//        NSLog(@"errorCode:%d",[error errorCode]);
     }
-    
-    [_startRecBtn setEnabled:YES];
-    //    [_audioStreamBtn setEnabled:YES];
-    //    [_upWordListBtn setEnabled:YES];
-    //    [_upContactBtn setEnabled:YES];
     
 }
 
@@ -277,11 +364,11 @@
     _textView.text = [NSString stringWithFormat:@"%@%@", _textView.text,resultFromJson];
     
     if (isLast){
-        NSLog(@"听写结果(json)：%@测试",  self.result);
+//        NSLog(@"听写结果(json)：%@测试",  self.result);
     }
-    NSLog(@"_result=%@",_result);
-    NSLog(@"resultFromJson=%@",resultFromJson);
-    NSLog(@"isLast=%d,_textView.text=%@",isLast,_textView.text);
+//    NSLog(@"_result=%@",_result);
+//    NSLog(@"resultFromJson=%@",resultFromJson);
+//    NSLog(@"isLast=%d,_textView.text=%@",isLast,_textView.text);
 }
 
 
@@ -312,19 +399,12 @@
     NSLog(@"识别取消");
 }
 
--(void) showPopup
-{
-    [_popUpView showText: @"正在上传..."];
-}
-
-
-
 /**
  设置识别参数
  ****/
 -(void)initRecognizer
 {
-    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);
     
     if ([IATConfig sharedInstance].haveView == NO) {//无界面
         
@@ -408,6 +488,55 @@
             
         }
     }
+}
+
+#pragma mark ----------- 动画部分 -----------
+- (void)startAnimation
+{
+    CALayer *layer = [[CALayer alloc] init];
+    layer.cornerRadius = [UIScreen mainScreen].bounds.size.width/2;
+    layer.frame = CGRectMake(0, 0, layer.cornerRadius * 2, layer.cornerRadius * 2);
+    layer.position = CGPointMake([UIScreen mainScreen].bounds.size.width/2,[UIScreen mainScreen].bounds.size.height - 99);
+    //    self.view.layer.position;
+    UIColor *color = [UIColor colorWithRed:arc4random()%10*0.1 green:arc4random()%10*0.1 blue:arc4random()%10*0.1 alpha:1];
+    layer.backgroundColor = color.CGColor;
+    [self.view.layer addSublayer:layer];
+    
+    CAMediaTimingFunction *defaultCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
+    
+    _animaTionGroup = [CAAnimationGroup animation];
+    _animaTionGroup.delegate = self;
+    _animaTionGroup.duration = 2;
+    _animaTionGroup.removedOnCompletion = YES;
+    _animaTionGroup.timingFunction = defaultCurve;
+    
+    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
+    scaleAnimation.fromValue = @0.0;
+    scaleAnimation.toValue = @1.0;
+    scaleAnimation.duration = 2;
+    
+    CAKeyframeAnimation *opencityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+    opencityAnimation.duration = 2;
+    opencityAnimation.values = @[@0.8,@0.4,@0];
+    opencityAnimation.keyTimes = @[@0,@0.5,@1];
+    opencityAnimation.removedOnCompletion = YES;
+    
+    NSArray *animations = @[scaleAnimation,opencityAnimation];
+    _animaTionGroup.animations = animations;
+    [layer addAnimation:_animaTionGroup forKey:nil];
+    
+    [self performSelector:@selector(removeLayer:) withObject:layer afterDelay:1.5];
+}
+
+- (void)removeLayer:(CALayer *)layer
+{
+    [layer removeFromSuperlayer];
+}
+
+
+- (void)delayAnimation
+{
+    [self startAnimation];
 }
 
 - (IBAction)goBackAction:(id)sender

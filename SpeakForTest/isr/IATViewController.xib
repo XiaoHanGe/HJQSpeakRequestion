@@ -7,9 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IATViewController">
             <connections>
-                <outlet property="cancelRecBtn" destination="paB-Qp-vhL" id="Knx-1l-WqR"/>
-                <outlet property="startRecBtn" destination="4hN-dM-IaA" id="2y5-eE-ZIe"/>
-                <outlet property="stopRecBtn" destination="lxn-hE-195" id="MDq-qv-FAJ"/>
+                <outlet property="starSpeckButton" destination="h8w-vF-lal" id="4xX-vh-CGY"/>
                 <outlet property="textView" destination="PhM-Vt-avZ" id="d85-G6-POb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,60 +17,67 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paB-Qp-vhL">
-                    <rect key="frame" x="218" y="341" width="94" height="49"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <state key="normal" title="取消">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="cancelBtnHandler:" destination="-1" eventType="touchUpInside" id="4xh-Wk-5D2"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hN-dM-IaA" userLabel="开始识别">
-                    <rect key="frame" x="2" y="341" width="94" height="49"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <state key="normal" title="开始识别">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="startBtnHandler:" destination="-1" eventType="touchUpInside" id="5pF-9g-rNh"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-hE-195">
-                    <rect key="frame" x="111" y="341" width="93" height="49"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <state key="normal" title="停止">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="stopBtnHandler:" destination="-1" eventType="touchUpInside" id="d66-Kk-VUu"/>
-                    </connections>
-                </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhM-Vt-avZ">
-                    <rect key="frame" x="2" y="149" width="310" height="169"/>
-                    <color key="backgroundColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PhM-Vt-avZ">
+                    <rect key="frame" x="8" y="93" width="304" height="88"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="En2-in-X8j"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j8-Of-Nnn">
-                    <rect key="frame" x="274" y="46" width="30" height="30"/>
-                    <state key="normal" title="返回"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8w-vF-lal">
+                    <rect key="frame" x="124" y="433" width="72" height="72"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="KnF-rq-mnH"/>
+                        <constraint firstAttribute="width" constant="72" id="VCD-M2-J64"/>
+                    </constraints>
+                    <state key="normal" image="client.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="语音搜索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-mo-fah">
+                    <rect key="frame" x="16" y="28" width="72" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="NBZ-kc-0EG"/>
+                        <constraint firstAttribute="width" constant="72" id="q3n-Bn-h0E"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j8-Of-Nnn">
+                    <rect key="frame" x="271" y="18" width="39" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="Dd8-hv-JXj"/>
+                        <constraint firstAttribute="width" constant="39" id="IEI-XS-8No"/>
+                    </constraints>
+                    <state key="normal" image="cancleButton.png"/>
                     <connections>
                         <action selector="goBackAction:" destination="-1" eventType="touchUpInside" id="vU8-8w-30Q"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PhM-Vt-avZ" secondAttribute="trailing" constant="8" id="3CG-Rx-yhv"/>
+                <constraint firstItem="AD2-mo-fah" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Dcw-Ts-F6P"/>
+                <constraint firstAttribute="bottom" secondItem="h8w-vF-lal" secondAttribute="bottom" constant="63" id="Use-xA-2eD"/>
+                <constraint firstItem="AD2-mo-fah" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="VjC-wO-0tE"/>
+                <constraint firstItem="h8w-vF-lal" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kks-te-mhW"/>
+                <constraint firstItem="PhM-Vt-avZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="mml-FF-syp"/>
+                <constraint firstItem="7j8-Of-Nnn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="pI5-7h-TNf"/>
+                <constraint firstItem="PhM-Vt-avZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="93" id="qMK-PI-yok"/>
+                <constraint firstAttribute="trailing" secondItem="7j8-Of-Nnn" secondAttribute="trailing" constant="10" id="v2W-cV-L4F"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="382" y="364"/>
         </view>
     </objects>
+    <resources>
+        <image name="cancleButton.png" width="32" height="32"/>
+        <image name="client.png" width="72" height="72"/>
+    </resources>
 </document>

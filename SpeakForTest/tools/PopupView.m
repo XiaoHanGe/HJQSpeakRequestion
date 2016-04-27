@@ -30,7 +30,7 @@
         _textLabel.font = [UIFont systemFontOfSize:17];
         _textLabel.textColor = [UIColor whiteColor];
         _textLabel.textAlignment = ALIGN_CENTER;
-        _textLabel.backgroundColor = [UIColor clearColor];
+        _textLabel.backgroundColor = [UIColor whiteColor];
         _textLabel.textAlignment = ALIGN_CENTER;
         [self addSubview:_textLabel];
         _queueCount = 0;
@@ -47,17 +47,15 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.ParentView = view;
-        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent: 0.5f];
+        self.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent: 1.0f];
         self.layer.cornerRadius = 5.0f;
         _textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 100, 10)];
         _textLabel.numberOfLines = 0;
         _textLabel.font = [UIFont systemFontOfSize:17];
-//        _textLabel.textColor = [UIColor whiteColor];
-        _textLabel.textColor = [UIColor greenColor];
+        _textLabel.textColor = [UIColor blueColor];
         
         _textLabel.textAlignment = ALIGN_CENTER;
-//        _textLabel.backgroundColor = [UIColor clearColor];
-        _textLabel.backgroundColor = [UIColor blackColor];
+        _textLabel.backgroundColor = [UIColor whiteColor];
         _textLabel.textAlignment = ALIGN_CENTER;
         [self addSubview:_textLabel];
         _queueCount = 0;

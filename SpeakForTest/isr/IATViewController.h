@@ -27,10 +27,6 @@
 @property (nonatomic, strong) IFlyDataUploader *uploader;//数据上传对象
 @property (nonatomic, strong) PopupView *popUpView;
 
-@property (weak, nonatomic) IBOutlet UIButton *startRecBtn;
-@property (weak, nonatomic) IBOutlet UIButton *stopRecBtn;
-@property (weak, nonatomic) IBOutlet UIButton *cancelRecBtn;
-
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property (nonatomic, strong) NSString * result;
