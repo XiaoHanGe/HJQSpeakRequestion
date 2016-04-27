@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11245D501CD04091002C605C /* IATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D4E1CD04091002C605C /* IATViewController.m */; };
+		11245D511CD04091002C605C /* IATViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11245D4F1CD04091002C605C /* IATViewController.xib */; };
 		116377041CCF8C9A0008FB7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377031CCF8C9A0008FB7E /* main.m */; };
 		116377071CCF8C9A0008FB7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377061CCF8C9A0008FB7E /* AppDelegate.m */; };
 		1163770A1CCF8C9A0008FB7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377091CCF8C9A0008FB7E /* ViewController.m */; };
@@ -26,7 +28,6 @@
 		116377471CCF8D770008FB7E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116377461CCF8D770008FB7E /* QuartzCore.framework */; };
 		116377491CCF8D820008FB7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116377481CCF8D820008FB7E /* CoreGraphics.framework */; };
 		116377531CCF979A0008FB7E /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163774C1CCF979A0008FB7E /* IATConfig.m */; };
-		116377551CCF979A0008FB7E /* IATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377501CCF979A0008FB7E /* IATViewController.m */; };
 		116377561CCF979A0008FB7E /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377521CCF979A0008FB7E /* ISRDataHelper.m */; };
 		1163776A1CCF982C0008FB7E /* call.bnf in Resources */ = {isa = PBXBuildFile; fileRef = 116377631CCF982C0008FB7E /* call.bnf */; };
 		1163776B1CCF982C0008FB7E /* grammar_sample.abnf in Resources */ = {isa = PBXBuildFile; fileRef = 116377641CCF982C0008FB7E /* grammar_sample.abnf */; };
@@ -61,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11245D4D1CD04091002C605C /* IATViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATViewController.h; sourceTree = "<group>"; };
+		11245D4E1CD04091002C605C /* IATViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATViewController.m; sourceTree = "<group>"; };
+		11245D4F1CD04091002C605C /* IATViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IATViewController.xib; sourceTree = "<group>"; };
 		116376FF1CCF8C9A0008FB7E /* SpeakForTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakForTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116377031CCF8C9A0008FB7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		116377051CCF8C9A0008FB7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,8 +93,6 @@
 		116377481CCF8D820008FB7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1163774B1CCF979A0008FB7E /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
 		1163774C1CCF979A0008FB7E /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
-		1163774F1CCF979A0008FB7E /* IATViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATViewController.h; sourceTree = "<group>"; };
-		116377501CCF979A0008FB7E /* IATViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATViewController.m; sourceTree = "<group>"; };
 		116377511CCF979A0008FB7E /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
 		116377521CCF979A0008FB7E /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
 		116377631CCF982C0008FB7E /* call.bnf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = call.bnf; sourceTree = "<group>"; };
@@ -241,10 +243,11 @@
 			children = (
 				1163774B1CCF979A0008FB7E /* IATConfig.h */,
 				1163774C1CCF979A0008FB7E /* IATConfig.m */,
-				1163774F1CCF979A0008FB7E /* IATViewController.h */,
-				116377501CCF979A0008FB7E /* IATViewController.m */,
 				116377511CCF979A0008FB7E /* ISRDataHelper.h */,
 				116377521CCF979A0008FB7E /* ISRDataHelper.m */,
+				11245D4D1CD04091002C605C /* IATViewController.h */,
+				11245D4E1CD04091002C605C /* IATViewController.m */,
+				11245D4F1CD04091002C605C /* IATViewController.xib */,
 			);
 			path = isr;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				1163776B1CCF982C0008FB7E /* grammar_sample.abnf in Resources */,
 				1163776C1CCF982C0008FB7E /* userwords in Resources */,
 				1163770F1CCF8C9A0008FB7E /* Assets.xcassets in Resources */,
+				11245D511CD04091002C605C /* IATViewController.xib in Resources */,
 				1163776E1CCF982C0008FB7E /* tts.strings in Resources */,
 				1163770D1CCF8C9A0008FB7E /* Main.storyboard in Resources */,
 			);
@@ -456,9 +460,9 @@
 				116377561CCF979A0008FB7E /* ISRDataHelper.m in Sources */,
 				116377911CCF98DF0008FB7E /* SBJson4StreamParserState.m in Sources */,
 				1163778F1CCF98DF0008FB7E /* SBJson4Parser.m in Sources */,
-				116377551CCF979A0008FB7E /* IATViewController.m in Sources */,
 				116377941CCF98DF0008FB7E /* SBJson4StreamWriterState.m in Sources */,
 				116377951CCF98DF0008FB7E /* SBJson4Writer.m in Sources */,
+				11245D501CD04091002C605C /* IATViewController.m in Sources */,
 				1163770A1CCF8C9A0008FB7E /* ViewController.m in Sources */,
 				116377071CCF8C9A0008FB7E /* AppDelegate.m in Sources */,
 				116377921CCF98DF0008FB7E /* SBJson4StreamTokeniser.m in Sources */,

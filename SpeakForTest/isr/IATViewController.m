@@ -1,9 +1,9 @@
 //
-//  IATViewController.h
-//  MSCDemo_UI
+//  IATViewController.m
+//  SpeakForTest
 //
-//  Created by wangdan on 15-4-28.
-//
+//  Created by 韩俊强 on 16/4/27.
+//  Copyright © 2016年 韩俊强. All rights reserved.
 //
 
 #import "IATViewController.h"
@@ -16,32 +16,30 @@
 #define NAME        @"userwords"
 #define USERWORDS   @"{\"userword\":[{\"name\":\"我的常用词\",\"words\":[\"佳晨实业\",\"蜀南庭苑\",\"高兰路\",\"复联二\"]},{\"name\":\"我的好友\",\"words\":[\"李馨琪\",\"鹿晓雷\",\"张集栋\",\"周家莉\",\"叶震珂\",\"熊泽萌\"]}]}"
 
+@interface IATViewController ()
 
+@end
 
 @implementation IATViewController
 
-
 #pragma mark - 视图生命周期
--(void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     _textView.layer.borderWidth = 0.5f;
     _textView.layer.borderColor = [[UIColor whiteColor] CGColor];
     [_textView.layer setCornerRadius:7.0f];
     
     CGFloat posY = self.textView.frame.origin.y+self.textView.frame.size.height/6;
     _popUpView = [[PopupView alloc] initWithFrame:CGRectMake(100, posY, 0, 0) withParentView:self.view];
-
+    
     self.uploader = [[IFlyDataUploader alloc] init];
-
+    
     //demo录音文件保存路径
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachePath = [paths objectAtIndex:0];
     _pcmFilePath = [[NSString alloc] initWithFormat:@"%@",[cachePath stringByAppendingPathComponent:@"asr.pcm"]];
-    
 }
-
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -79,14 +77,6 @@
     
     [super viewWillDisappear:animated];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-}
-
-
 -(void)dealloc
 {
     
@@ -136,9 +126,9 @@
         BOOL ret = [_iFlySpeechRecognizer startListening];
         
         if (ret) {
-//            [_audioStreamBtn setEnabled:NO];
-//            [_upWordListBtn setEnabled:NO];
-//            [_upContactBtn setEnabled:NO];
+            //            [_audioStreamBtn setEnabled:NO];
+            //            [_upWordListBtn setEnabled:NO];
+            //            [_upContactBtn setEnabled:NO];
         }else{
             [_popUpView showText: @"启动识别服务失败，请稍后重试"];//可能是上次请求未结束，暂不支持多路并发
         }
@@ -154,7 +144,7 @@
         
         //设置音频来源为麦克风
         [_iflyRecognizerView setParameter:IFLY_AUDIO_SOURCE_MIC forKey:@"audio_source"];
-
+        
         //设置听写结果格式为json
         [_iflyRecognizerView setParameter:@"plain" forKey:[IFlySpeechConstant RESULT_TYPE]];
         
@@ -163,7 +153,7 @@
         
         [_iflyRecognizerView start];
     }
-
+    
 }
 
 /**
@@ -256,16 +246,16 @@
         }
         
         [_popUpView showText: text];
-
+        
     }else {
         [_popUpView showText:@"识别结束"];
         NSLog(@"errorCode:%d",[error errorCode]);
     }
     
     [_startRecBtn setEnabled:YES];
-//    [_audioStreamBtn setEnabled:YES];
-//    [_upWordListBtn setEnabled:YES];
-//    [_upContactBtn setEnabled:YES];
+    //    [_audioStreamBtn setEnabled:YES];
+    //    [_upWordListBtn setEnabled:YES];
+    //    [_upContactBtn setEnabled:YES];
     
 }
 
@@ -377,7 +367,7 @@
             
         }
     }else  {//有界面
-
+        
         //单例模式，UI的实例
         if (_iflyRecognizerView == nil) {
             //UI显示剧中
@@ -387,7 +377,7 @@
             
             //设置听写模式
             [_iflyRecognizerView setParameter:@"iat" forKey:[IFlySpeechConstant IFLY_DOMAIN]];
-
+            
         }
         _iflyRecognizerView.delegate = self;
         
@@ -420,5 +410,25 @@
     }
 }
 
+- (IBAction)goBackAction:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

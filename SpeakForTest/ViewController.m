@@ -7,9 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "iflyMSC/IFlyMSC.h"
-#import "iflyMSC/IFlySpeechError.h"
-#import <Foundation/Foundation.h>
+#import "IATViewController.h"
 @interface ViewController ()
 
 @end
@@ -18,6 +16,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+}
+
+- (IBAction)goTest:(id)sender
+{
+    
+    IATViewController *hjqVC = [[IATViewController alloc]init];
+    
+    [self presentViewController:hjqVC animated:YES completion:nil];
 }
 
 
