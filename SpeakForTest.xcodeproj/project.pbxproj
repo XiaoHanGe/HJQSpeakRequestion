@@ -13,13 +13,6 @@
 		11245DA21CD05E13002C605C /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D791CD05E13002C605C /* ISRDataHelper.m */; };
 		11245DA31CD05E13002C605C /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11245D7B1CD05E13002C605C /* iflyMSC.framework */; };
 		11245DA41CD05E13002C605C /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D7E1CD05E13002C605C /* PopupView.m */; };
-		11245DA51CD05E13002C605C /* SBJson4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D821CD05E13002C605C /* SBJson4Parser.m */; };
-		11245DA61CD05E13002C605C /* SBJson4StreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D841CD05E13002C605C /* SBJson4StreamParser.m */; };
-		11245DA71CD05E13002C605C /* SBJson4StreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D861CD05E13002C605C /* SBJson4StreamParserState.m */; };
-		11245DA81CD05E13002C605C /* SBJson4StreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D881CD05E13002C605C /* SBJson4StreamTokeniser.m */; };
-		11245DA91CD05E13002C605C /* SBJson4StreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D8A1CD05E13002C605C /* SBJson4StreamWriter.m */; };
-		11245DAA1CD05E13002C605C /* SBJson4StreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D8C1CD05E13002C605C /* SBJson4StreamWriterState.m */; };
-		11245DAB1CD05E13002C605C /* SBJson4Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D8E1CD05E13002C605C /* SBJson4Writer.m */; };
 		11245DAC1CD05E13002C605C /* cancleButton2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11245D901CD05E13002C605C /* cancleButton2x.png */; };
 		11245DAD1CD05E13002C605C /* cancleButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11245D911CD05E13002C605C /* cancleButton@3x.png */; };
 		11245DAE1CD05E13002C605C /* client@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11245D921CD05E13002C605C /* client@2x.png */; };
@@ -78,21 +71,6 @@
 		11245D7B1CD05E13002C605C /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		11245D7D1CD05E13002C605C /* PopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupView.h; sourceTree = "<group>"; };
 		11245D7E1CD05E13002C605C /* PopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupView.m; sourceTree = "<group>"; };
-		11245D801CD05E13002C605C /* SBJson4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4.h; sourceTree = "<group>"; };
-		11245D811CD05E13002C605C /* SBJson4Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Parser.h; sourceTree = "<group>"; };
-		11245D821CD05E13002C605C /* SBJson4Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Parser.m; sourceTree = "<group>"; };
-		11245D831CD05E13002C605C /* SBJson4StreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamParser.h; sourceTree = "<group>"; };
-		11245D841CD05E13002C605C /* SBJson4StreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamParser.m; sourceTree = "<group>"; };
-		11245D851CD05E13002C605C /* SBJson4StreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamParserState.h; sourceTree = "<group>"; };
-		11245D861CD05E13002C605C /* SBJson4StreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamParserState.m; sourceTree = "<group>"; };
-		11245D871CD05E13002C605C /* SBJson4StreamTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamTokeniser.h; sourceTree = "<group>"; };
-		11245D881CD05E13002C605C /* SBJson4StreamTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamTokeniser.m; sourceTree = "<group>"; };
-		11245D891CD05E13002C605C /* SBJson4StreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamWriter.h; sourceTree = "<group>"; };
-		11245D8A1CD05E13002C605C /* SBJson4StreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamWriter.m; sourceTree = "<group>"; };
-		11245D8B1CD05E13002C605C /* SBJson4StreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamWriterState.h; sourceTree = "<group>"; };
-		11245D8C1CD05E13002C605C /* SBJson4StreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamWriterState.m; sourceTree = "<group>"; };
-		11245D8D1CD05E13002C605C /* SBJson4Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Writer.h; sourceTree = "<group>"; };
-		11245D8E1CD05E13002C605C /* SBJson4Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Writer.m; sourceTree = "<group>"; };
 		11245D901CD05E13002C605C /* cancleButton2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancleButton2x.png; sourceTree = "<group>"; };
 		11245D911CD05E13002C605C /* cancleButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancleButton@3x.png"; sourceTree = "<group>"; };
 		11245D921CD05E13002C605C /* client@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "client@2x.png"; sourceTree = "<group>"; };
@@ -212,31 +190,8 @@
 			children = (
 				11245D7D1CD05E13002C605C /* PopupView.h */,
 				11245D7E1CD05E13002C605C /* PopupView.m */,
-				11245D7F1CD05E13002C605C /* SBJson */,
 			);
 			path = tools;
-			sourceTree = "<group>";
-		};
-		11245D7F1CD05E13002C605C /* SBJson */ = {
-			isa = PBXGroup;
-			children = (
-				11245D801CD05E13002C605C /* SBJson4.h */,
-				11245D811CD05E13002C605C /* SBJson4Parser.h */,
-				11245D821CD05E13002C605C /* SBJson4Parser.m */,
-				11245D831CD05E13002C605C /* SBJson4StreamParser.h */,
-				11245D841CD05E13002C605C /* SBJson4StreamParser.m */,
-				11245D851CD05E13002C605C /* SBJson4StreamParserState.h */,
-				11245D861CD05E13002C605C /* SBJson4StreamParserState.m */,
-				11245D871CD05E13002C605C /* SBJson4StreamTokeniser.h */,
-				11245D881CD05E13002C605C /* SBJson4StreamTokeniser.m */,
-				11245D891CD05E13002C605C /* SBJson4StreamWriter.h */,
-				11245D8A1CD05E13002C605C /* SBJson4StreamWriter.m */,
-				11245D8B1CD05E13002C605C /* SBJson4StreamWriterState.h */,
-				11245D8C1CD05E13002C605C /* SBJson4StreamWriterState.m */,
-				11245D8D1CD05E13002C605C /* SBJson4Writer.h */,
-				11245D8E1CD05E13002C605C /* SBJson4Writer.m */,
-			);
-			path = SBJson;
 			sourceTree = "<group>";
 		};
 		11245D8F1CD05E13002C605C /* VoiceImages */ = {
@@ -469,18 +424,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11245DAB1CD05E13002C605C /* SBJson4Writer.m in Sources */,
 				11245DA21CD05E13002C605C /* ISRDataHelper.m in Sources */,
 				1163770A1CCF8C9A0008FB7E /* ViewController.m in Sources */,
-				11245DA51CD05E13002C605C /* SBJson4Parser.m in Sources */,
 				11245DA41CD05E13002C605C /* PopupView.m in Sources */,
-				11245DA71CD05E13002C605C /* SBJson4StreamParserState.m in Sources */,
 				116377071CCF8C9A0008FB7E /* AppDelegate.m in Sources */,
-				11245DA61CD05E13002C605C /* SBJson4StreamParser.m in Sources */,
 				11245D9F1CD05E13002C605C /* IATConfig.m in Sources */,
-				11245DA91CD05E13002C605C /* SBJson4StreamWriter.m in Sources */,
-				11245DAA1CD05E13002C605C /* SBJson4StreamWriterState.m in Sources */,
-				11245DA81CD05E13002C605C /* SBJson4StreamTokeniser.m in Sources */,
 				11245DA01CD05E13002C605C /* IATViewController.m in Sources */,
 				116377041CCF8C9A0008FB7E /* main.m in Sources */,
 			);
