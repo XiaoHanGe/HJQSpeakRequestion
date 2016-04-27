@@ -33,7 +33,6 @@
 		1163776C1CCF982C0008FB7E /* userwords in Resources */ = {isa = PBXBuildFile; fileRef = 116377651CCF982C0008FB7E /* userwords */; };
 		1163776D1CCF982C0008FB7E /* eva.strings in Resources */ = {isa = PBXBuildFile; fileRef = 116377671CCF982C0008FB7E /* eva.strings */; };
 		1163776E1CCF982C0008FB7E /* tts.strings in Resources */ = {isa = PBXBuildFile; fileRef = 116377691CCF982C0008FB7E /* tts.strings */; };
-		1163778D1CCF98DF0008FB7E /* PcmPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377781CCF98DF0008FB7E /* PcmPlayer.m */; };
 		1163778E1CCF98DF0008FB7E /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163777B1CCF98DF0008FB7E /* PopupView.m */; };
 		1163778F1CCF98DF0008FB7E /* SBJson4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163777F1CCF98DF0008FB7E /* SBJson4Parser.m */; };
 		116377901CCF98DF0008FB7E /* SBJson4StreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377811CCF98DF0008FB7E /* SBJson4StreamParser.m */; };
@@ -100,9 +99,6 @@
 		116377671CCF982C0008FB7E /* eva.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = eva.strings; sourceTree = "<group>"; };
 		116377691CCF982C0008FB7E /* tts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = tts.strings; sourceTree = "<group>"; };
 		1163776F1CCF983D0008FB7E /* Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
-		116377771CCF98DF0008FB7E /* PcmPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayer.h; sourceTree = "<group>"; };
-		116377781CCF98DF0008FB7E /* PcmPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PcmPlayer.m; sourceTree = "<group>"; };
-		116377791CCF98DF0008FB7E /* PcmPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayerDelegate.h; sourceTree = "<group>"; };
 		1163777A1CCF98DF0008FB7E /* PopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupView.h; sourceTree = "<group>"; };
 		1163777B1CCF98DF0008FB7E /* PopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupView.m; sourceTree = "<group>"; };
 		1163777D1CCF98DF0008FB7E /* SBJson4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4.h; sourceTree = "<group>"; };
@@ -293,22 +289,11 @@
 		116377731CCF98DF0008FB7E /* tools */ = {
 			isa = PBXGroup;
 			children = (
-				116377761CCF98DF0008FB7E /* pcmPlayerCode */,
 				1163777A1CCF98DF0008FB7E /* PopupView.h */,
 				1163777B1CCF98DF0008FB7E /* PopupView.m */,
 				1163777C1CCF98DF0008FB7E /* SBJson */,
 			);
 			path = tools;
-			sourceTree = "<group>";
-		};
-		116377761CCF98DF0008FB7E /* pcmPlayerCode */ = {
-			isa = PBXGroup;
-			children = (
-				116377771CCF98DF0008FB7E /* PcmPlayer.h */,
-				116377781CCF98DF0008FB7E /* PcmPlayer.m */,
-				116377791CCF98DF0008FB7E /* PcmPlayerDelegate.h */,
-			);
-			path = pcmPlayerCode;
 			sourceTree = "<group>";
 		};
 		1163777C1CCF98DF0008FB7E /* SBJson */ = {
@@ -470,7 +455,6 @@
 			files = (
 				116377561CCF979A0008FB7E /* ISRDataHelper.m in Sources */,
 				116377911CCF98DF0008FB7E /* SBJson4StreamParserState.m in Sources */,
-				1163778D1CCF98DF0008FB7E /* PcmPlayer.m in Sources */,
 				1163778F1CCF98DF0008FB7E /* SBJson4Parser.m in Sources */,
 				116377551CCF979A0008FB7E /* IATViewController.m in Sources */,
 				116377941CCF98DF0008FB7E /* SBJson4StreamWriterState.m in Sources */,

@@ -10,64 +10,16 @@
 #import "iflyMSC/IFlyMSC.h"
 #import "iflyMSC/IFlySpeechError.h"
 #import <Foundation/Foundation.h>
-@interface ViewController ()<IFlySpeechRecognizerDelegate>
-//不带界面的识别对象
-{
-   IFlySpeechRecognizer *iFlySpeechRecognizer;
-}
-@end
+@interface ViewController ()
 
+@end
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //1.创建语音听写对象
-    iFlySpeechRecognizer = [IFlySpeechRecognizer sharedInstance]; //设置听写模式
-    [iFlySpeechRecognizer setParameter:@"iat" forKey:[IFlySpeechConstant IFLY_DOMAIN]];
-    //2.设置听写参数
-    [iFlySpeechRecognizer setParameter: @"iat" forKey: [IFlySpeechConstant IFLY_DOMAIN]];
-    //asr_audio_path是录音文件名,设置value为nil或者为空取消保存,默认保存目录在 Library/cache下。
-    [iFlySpeechRecognizer setParameter:@"asrview.pcm" forKey:[IFlySpeechConstant ASR_AUDIO_PATH]];
-    //3.启动识别服务 [_iFlySpeechRecognizer start];
+
 }
 
-//4. IFlySpeechRecognizerDelegate识别代理
-/*识别结果返回代理
- @param :results识别结果
- @ param :isLast 表示是否最后一次结果
- */
-- (void) onResults:(NSArray *)results isLast:(BOOL)isLast
-{
-    
-}
-/*识别会话结束返回代理
- @ param error 错误码,error.errorCode=0表示正常结束,非0表示发生错误。 */
-- (void)onError: (IFlySpeechError *) error
-{
-    
-}
-/**
- 停止录音回调
- ****/
-- (void)onEndOfSpeech
-{
-    
-}
-/**
- 开始识别回调
- ****/
-- (void)onBeginOfSpeech
-{
-    
-}
-/**
- 音量回调函数 volume 0-30
- 9
- ****/
-- (void) onVolumeChanged:(int)volume
-{
-    
-}
 
 
 
