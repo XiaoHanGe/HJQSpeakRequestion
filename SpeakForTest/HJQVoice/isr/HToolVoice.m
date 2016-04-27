@@ -50,6 +50,12 @@
 
 }
 
+// 回调结果
+- (void)returnString:(PassValue)block
+{
+    self.passValue = block;
+}
+
 /**
  启动听写
  *****/
@@ -224,6 +230,9 @@
     _result =[NSString stringWithFormat:@"%@%@", _textViewString.text,resultString];
     NSString * resultFromJson =  [ISRDataHelper stringFromJson:resultString];
     _textViewString.text = [NSString stringWithFormat:@"%@%@", _textViewString.text,resultFromJson];
+    
+    // 回调
+    self.passValue(_textViewString.text);
     
     if (isLast){
         //        NSLog(@"听写结果(json)：%@测试",  self.result);

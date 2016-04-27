@@ -17,6 +17,7 @@
 {
     HToolVoice *hVoice; // 初始化类
     NSString *aString;  // 过度拼接字符串
+    __block NSString *string;
 }
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
 
@@ -32,7 +33,9 @@
     [hVoice startForVoice:self.view];
     [self configureTopView:_myTextField];
     
-    
+    hVoice.passValue = ^(NSString *PassValueString){
+        _myTextField.text = PassValueString;
+    };
 
 }
 
@@ -68,6 +71,7 @@
 
 #pragma mark ------ 关于按钮操作的一些事情-------
 - (void)holdDownButtonTouchDown {
+    _myTextField.text = @" ";
     // 开始说话
     [hVoice startBtnHandler:_myTextField];
 }

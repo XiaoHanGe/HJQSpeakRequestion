@@ -19,6 +19,7 @@
  3.有选择的实现识别回调；
  4.启动识别
  */
+typedef void (^PassValue)(NSString *PassValueString);
 
 @interface HToolVoice : NSObject<IFlySpeechRecognizerDelegate,IFlyRecognizerViewDelegate,UIActionSheetDelegate>
 
@@ -30,6 +31,10 @@
 @property (nonatomic, strong) NSString * result;
 @property (nonatomic, assign) BOOL isCanceled;
 @property (nonatomic, strong) UITextView *textViewString;
+@property (nonatomic, strong) PassValue passValue;
+
+// 回调结果
+- (void)returnString:(PassValue)block;
 
 // 初始化配置
 - (void)startForVoice:(UIView*)view;
