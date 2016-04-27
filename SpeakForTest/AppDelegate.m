@@ -25,6 +25,7 @@
     //Appid是应用的身份信息,具有唯一性,初始化时必须要传入Appid。
     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"571e16f5"];
     [IFlySpeechUtility createUtility:initString];
+    
     return YES;
 }
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
