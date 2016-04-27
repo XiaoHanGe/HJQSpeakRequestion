@@ -33,9 +33,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *startRecBtn;
 @property (weak, nonatomic) IBOutlet UIButton *stopRecBtn;
 @property (weak, nonatomic) IBOutlet UIButton *cancelRecBtn;
-@property (weak, nonatomic) IBOutlet UIButton *upContactBtn;
-@property (weak, nonatomic) IBOutlet UIButton *upWordListBtn;
-@property (weak, nonatomic) IBOutlet UIButton *audioStreamBtn;
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingBtn;

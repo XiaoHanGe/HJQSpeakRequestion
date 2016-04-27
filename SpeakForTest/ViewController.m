@@ -63,12 +63,8 @@
 /**
  音量回调函数 volume 0-30
  9
- 5. 语义理解
- 使用语义理解前需要首先确保对应的appid已经开通语义功能,可参照: http://www.xfyun.cn/services/osp,语音识别结果请参照“语义开放平台API规范文档” 所示。使用示例如下所示:
- 科大讯飞 MSC 新手指南(iOS)
- 
  ****/
-- (void) onVolumeChanged: (int)volume
+- (void) onVolumeChanged:(int)volume
 {
     
 }

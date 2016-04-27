@@ -26,12 +26,8 @@
 		116377471CCF8D770008FB7E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116377461CCF8D770008FB7E /* QuartzCore.framework */; };
 		116377491CCF8D820008FB7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116377481CCF8D820008FB7E /* CoreGraphics.framework */; };
 		116377531CCF979A0008FB7E /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163774C1CCF979A0008FB7E /* IATConfig.m */; };
-		116377541CCF979A0008FB7E /* IATConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163774E1CCF979A0008FB7E /* IATConfigViewController.m */; };
 		116377551CCF979A0008FB7E /* IATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377501CCF979A0008FB7E /* IATViewController.m */; };
 		116377561CCF979A0008FB7E /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377521CCF979A0008FB7E /* ISRDataHelper.m */; };
-		1163775E1CCF97F80008FB7E /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377591CCF97F80008FB7E /* AKPickerView.m */; };
-		1163775F1CCF97F80008FB7E /* SAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163775B1CCF97F80008FB7E /* SAMath.m */; };
-		116377601CCF97F80008FB7E /* SAMultisectorControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163775D1CCF97F80008FB7E /* SAMultisectorControl.m */; };
 		1163776A1CCF982C0008FB7E /* call.bnf in Resources */ = {isa = PBXBuildFile; fileRef = 116377631CCF982C0008FB7E /* call.bnf */; };
 		1163776B1CCF982C0008FB7E /* grammar_sample.abnf in Resources */ = {isa = PBXBuildFile; fileRef = 116377641CCF982C0008FB7E /* grammar_sample.abnf */; };
 		1163776C1CCF982C0008FB7E /* userwords in Resources */ = {isa = PBXBuildFile; fileRef = 116377651CCF982C0008FB7E /* userwords */; };
@@ -94,18 +90,10 @@
 		116377481CCF8D820008FB7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1163774B1CCF979A0008FB7E /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
 		1163774C1CCF979A0008FB7E /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
-		1163774D1CCF979A0008FB7E /* IATConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfigViewController.h; sourceTree = "<group>"; };
-		1163774E1CCF979A0008FB7E /* IATConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfigViewController.m; sourceTree = "<group>"; };
 		1163774F1CCF979A0008FB7E /* IATViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATViewController.h; sourceTree = "<group>"; };
 		116377501CCF979A0008FB7E /* IATViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATViewController.m; sourceTree = "<group>"; };
 		116377511CCF979A0008FB7E /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
 		116377521CCF979A0008FB7E /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
-		116377581CCF97F80008FB7E /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
-		116377591CCF97F80008FB7E /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
-		1163775A1CCF97F80008FB7E /* SAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMath.h; sourceTree = "<group>"; };
-		1163775B1CCF97F80008FB7E /* SAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMath.m; sourceTree = "<group>"; };
-		1163775C1CCF97F80008FB7E /* SAMultisectorControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMultisectorControl.h; sourceTree = "<group>"; };
-		1163775D1CCF97F80008FB7E /* SAMultisectorControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMultisectorControl.m; sourceTree = "<group>"; };
 		116377631CCF982C0008FB7E /* call.bnf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = call.bnf; sourceTree = "<group>"; };
 		116377641CCF982C0008FB7E /* grammar_sample.abnf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grammar_sample.abnf; sourceTree = "<group>"; };
 		116377651CCF982C0008FB7E /* userwords */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userwords; sourceTree = "<group>"; };
@@ -204,7 +192,6 @@
 				116377731CCF98DF0008FB7E /* tools */,
 				116377611CCF982C0008FB7E /* data */,
 				116377351CCF8D060008FB7E /* lib */,
-				116377571CCF97F80008FB7E /* SettingView */,
 				1163774A1CCF979A0008FB7E /* isr */,
 				116377051CCF8C9A0008FB7E /* AppDelegate.h */,
 				116377061CCF8C9A0008FB7E /* AppDelegate.m */,
@@ -258,27 +245,12 @@
 			children = (
 				1163774B1CCF979A0008FB7E /* IATConfig.h */,
 				1163774C1CCF979A0008FB7E /* IATConfig.m */,
-				1163774D1CCF979A0008FB7E /* IATConfigViewController.h */,
-				1163774E1CCF979A0008FB7E /* IATConfigViewController.m */,
 				1163774F1CCF979A0008FB7E /* IATViewController.h */,
 				116377501CCF979A0008FB7E /* IATViewController.m */,
 				116377511CCF979A0008FB7E /* ISRDataHelper.h */,
 				116377521CCF979A0008FB7E /* ISRDataHelper.m */,
 			);
 			path = isr;
-			sourceTree = "<group>";
-		};
-		116377571CCF97F80008FB7E /* SettingView */ = {
-			isa = PBXGroup;
-			children = (
-				116377581CCF97F80008FB7E /* AKPickerView.h */,
-				116377591CCF97F80008FB7E /* AKPickerView.m */,
-				1163775A1CCF97F80008FB7E /* SAMath.h */,
-				1163775B1CCF97F80008FB7E /* SAMath.m */,
-				1163775C1CCF97F80008FB7E /* SAMultisectorControl.h */,
-				1163775D1CCF97F80008FB7E /* SAMultisectorControl.m */,
-			);
-			path = SettingView;
 			sourceTree = "<group>";
 		};
 		116377611CCF982C0008FB7E /* data */ = {
@@ -498,7 +470,6 @@
 			files = (
 				116377561CCF979A0008FB7E /* ISRDataHelper.m in Sources */,
 				116377911CCF98DF0008FB7E /* SBJson4StreamParserState.m in Sources */,
-				116377541CCF979A0008FB7E /* IATConfigViewController.m in Sources */,
 				1163778D1CCF98DF0008FB7E /* PcmPlayer.m in Sources */,
 				1163778F1CCF98DF0008FB7E /* SBJson4Parser.m in Sources */,
 				116377551CCF979A0008FB7E /* IATViewController.m in Sources */,
@@ -507,12 +478,9 @@
 				1163770A1CCF8C9A0008FB7E /* ViewController.m in Sources */,
 				116377071CCF8C9A0008FB7E /* AppDelegate.m in Sources */,
 				116377921CCF98DF0008FB7E /* SBJson4StreamTokeniser.m in Sources */,
-				116377601CCF97F80008FB7E /* SAMultisectorControl.m in Sources */,
-				1163775F1CCF97F80008FB7E /* SAMath.m in Sources */,
 				1163778E1CCF98DF0008FB7E /* PopupView.m in Sources */,
 				116377531CCF979A0008FB7E /* IATConfig.m in Sources */,
 				116377901CCF98DF0008FB7E /* SBJson4StreamParser.m in Sources */,
-				1163775E1CCF97F80008FB7E /* AKPickerView.m in Sources */,
 				116377931CCF98DF0008FB7E /* SBJson4StreamWriter.m in Sources */,
 				116377041CCF8C9A0008FB7E /* main.m in Sources */,
 			);
@@ -750,6 +718,7 @@
 				1163772E1CCF8C9A0008FB7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1163772F1CCF8C9A0008FB7E /* Build configuration list for PBXNativeTarget "SpeakForTestTests" */ = {
 			isa = XCConfigurationList;
@@ -758,6 +727,7 @@
 				116377311CCF8C9A0008FB7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		116377321CCF8C9A0008FB7E /* Build configuration list for PBXNativeTarget "SpeakForTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -766,6 +736,7 @@
 				116377341CCF8C9A0008FB7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

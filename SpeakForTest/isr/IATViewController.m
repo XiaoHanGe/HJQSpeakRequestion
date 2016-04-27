@@ -11,7 +11,6 @@
 #import "Definition.h"
 #import "PopupView.h"
 #import "ISRDataHelper.h"
-#import "IATConfigViewController.h"
 #import "IATConfig.h"
 
 #define NAME        @"userwords"
@@ -53,9 +52,6 @@
     [self initRecognizer];//初始化识别对象
     
     [_startRecBtn setEnabled:YES];
-    [_audioStreamBtn setEnabled:YES];
-    [_upWordListBtn setEnabled:YES];
-    [_upContactBtn setEnabled:YES];
 }
 
 - (void)viewDidUnload
@@ -140,9 +136,9 @@
         BOOL ret = [_iFlySpeechRecognizer startListening];
         
         if (ret) {
-            [_audioStreamBtn setEnabled:NO];
-            [_upWordListBtn setEnabled:NO];
-            [_upContactBtn setEnabled:NO];
+//            [_audioStreamBtn setEnabled:NO];
+//            [_upWordListBtn setEnabled:NO];
+//            [_upContactBtn setEnabled:NO];
         }else{
             [_popUpView showText: @"启动识别服务失败，请稍后重试"];//可能是上次请求未结束，暂不支持多路并发
         }
@@ -267,9 +263,9 @@
     }
     
     [_startRecBtn setEnabled:YES];
-    [_audioStreamBtn setEnabled:YES];
-    [_upWordListBtn setEnabled:YES];
-    [_upContactBtn setEnabled:YES];
+//    [_audioStreamBtn setEnabled:YES];
+//    [_upWordListBtn setEnabled:YES];
+//    [_upContactBtn setEnabled:YES];
     
 }
 
