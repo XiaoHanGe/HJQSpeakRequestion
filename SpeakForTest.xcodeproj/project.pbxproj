@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11245D9A1CD05E13002C605C /* call.bnf in Resources */ = {isa = PBXBuildFile; fileRef = 11245D6A1CD05E13002C605C /* call.bnf */; };
-		11245D9B1CD05E13002C605C /* grammar_sample.abnf in Resources */ = {isa = PBXBuildFile; fileRef = 11245D6B1CD05E13002C605C /* grammar_sample.abnf */; };
-		11245D9C1CD05E13002C605C /* userwords in Resources */ = {isa = PBXBuildFile; fileRef = 11245D6C1CD05E13002C605C /* userwords */; };
-		11245D9D1CD05E13002C605C /* eva.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11245D6F1CD05E13002C605C /* eva.strings */; };
-		11245D9E1CD05E13002C605C /* tts.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11245D711CD05E13002C605C /* tts.strings */; };
 		11245D9F1CD05E13002C605C /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D741CD05E13002C605C /* IATConfig.m */; };
 		11245DA01CD05E13002C605C /* IATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245D761CD05E13002C605C /* IATViewController.m */; };
 		11245DA11CD05E13002C605C /* IATViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11245D771CD05E13002C605C /* IATViewController.xib */; };
@@ -72,12 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11245D6A1CD05E13002C605C /* call.bnf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = call.bnf; sourceTree = "<group>"; };
-		11245D6B1CD05E13002C605C /* grammar_sample.abnf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grammar_sample.abnf; sourceTree = "<group>"; };
-		11245D6C1CD05E13002C605C /* userwords */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userwords; sourceTree = "<group>"; };
 		11245D6D1CD05E13002C605C /* Definition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
-		11245D6F1CD05E13002C605C /* eva.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = eva.strings; sourceTree = "<group>"; };
-		11245D711CD05E13002C605C /* tts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = tts.strings; sourceTree = "<group>"; };
 		11245D731CD05E13002C605C /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
 		11245D741CD05E13002C605C /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
 		11245D751CD05E13002C605C /* IATViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATViewController.h; sourceTree = "<group>"; };
@@ -190,38 +180,9 @@
 		11245D681CD05E13002C605C /* data */ = {
 			isa = PBXGroup;
 			children = (
-				11245D691CD05E13002C605C /* bnf */,
 				11245D6D1CD05E13002C605C /* Definition.h */,
-				11245D6E1CD05E13002C605C /* eva */,
-				11245D701CD05E13002C605C /* tts */,
 			);
 			path = data;
-			sourceTree = "<group>";
-		};
-		11245D691CD05E13002C605C /* bnf */ = {
-			isa = PBXGroup;
-			children = (
-				11245D6A1CD05E13002C605C /* call.bnf */,
-				11245D6B1CD05E13002C605C /* grammar_sample.abnf */,
-				11245D6C1CD05E13002C605C /* userwords */,
-			);
-			path = bnf;
-			sourceTree = "<group>";
-		};
-		11245D6E1CD05E13002C605C /* eva */ = {
-			isa = PBXGroup;
-			children = (
-				11245D6F1CD05E13002C605C /* eva.strings */,
-			);
-			path = eva;
-			sourceTree = "<group>";
-		};
-		11245D701CD05E13002C605C /* tts */ = {
-			isa = PBXGroup;
-			children = (
-				11245D711CD05E13002C605C /* tts.strings */,
-			);
-			path = tts;
 			sourceTree = "<group>";
 		};
 		11245D721CD05E13002C605C /* isr */ = {
@@ -470,19 +431,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11245D9A1CD05E13002C605C /* call.bnf in Resources */,
-				11245D9D1CD05E13002C605C /* eva.strings in Resources */,
 				116377121CCF8C9A0008FB7E /* LaunchScreen.storyboard in Resources */,
 				11245DAF1CD05E13002C605C /* client@3x.png in Resources */,
 				11245DB31CD05E13002C605C /* searchVoice@3x.png in Resources */,
 				11245DB41CD05E13002C605C /* speck@2x.png in Resources */,
 				11245DB01CD05E13002C605C /* Oval@2x.png in Resources */,
-				11245D9B1CD05E13002C605C /* grammar_sample.abnf in Resources */,
-				11245D9C1CD05E13002C605C /* userwords in Resources */,
 				11245DAD1CD05E13002C605C /* cancleButton@3x.png in Resources */,
 				1163770F1CCF8C9A0008FB7E /* Assets.xcassets in Resources */,
 				11245DA11CD05E13002C605C /* IATViewController.xib in Resources */,
-				11245D9E1CD05E13002C605C /* tts.strings in Resources */,
 				11245DB21CD05E13002C605C /* searchVoice@2x.png in Resources */,
 				11245DAE1CD05E13002C605C /* client@2x.png in Resources */,
 				11245DB51CD05E13002C605C /* speck@3x.png in Resources */,
