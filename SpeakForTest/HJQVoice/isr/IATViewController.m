@@ -205,6 +205,9 @@
             [self initRecognizer];
         }
         
+        //不带标点
+        [IATConfig sharedInstance].dot = [IFlySpeechConstant ASR_PTT_NODOT];
+
         [_iFlySpeechRecognizer cancel];
         
         //设置音频来源为麦克风
