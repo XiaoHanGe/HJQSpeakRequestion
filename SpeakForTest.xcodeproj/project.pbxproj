@@ -23,6 +23,11 @@
 		11245DB31CD05E13002C605C /* searchVoice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11245D971CD05E13002C605C /* searchVoice@3x.png */; };
 		11245DB41CD05E13002C605C /* speck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11245D981CD05E13002C605C /* speck@2x.png */; };
 		11245DB51CD05E13002C605C /* speck@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11245D991CD05E13002C605C /* speck@3x.png */; };
+		11245E201CD0A417002C605C /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245E1F1CD0A417002C605C /* MyViewController.m */; };
+		11245E231CD0AED6002C605C /* UIButton+CenterImageAndTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245E221CD0AED6002C605C /* UIButton+CenterImageAndTitle.m */; };
+		11245E261CD0B042002C605C /* microphone1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11245E241CD0B042002C605C /* microphone1@2x.png */; };
+		11245E271CD0B042002C605C /* microphone1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11245E251CD0B042002C605C /* microphone1@3x.png */; };
+		11245E371CD0BD6B002C605C /* HToolVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 11245E361CD0BD6B002C605C /* HToolVoice.m */; };
 		116377041CCF8C9A0008FB7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377031CCF8C9A0008FB7E /* main.m */; };
 		116377071CCF8C9A0008FB7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377061CCF8C9A0008FB7E /* AppDelegate.m */; };
 		1163770A1CCF8C9A0008FB7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116377091CCF8C9A0008FB7E /* ViewController.m */; };
@@ -81,6 +86,14 @@
 		11245D971CD05E13002C605C /* searchVoice@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchVoice@3x.png"; sourceTree = "<group>"; };
 		11245D981CD05E13002C605C /* speck@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speck@2x.png"; sourceTree = "<group>"; };
 		11245D991CD05E13002C605C /* speck@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speck@3x.png"; sourceTree = "<group>"; };
+		11245E1E1CD0A417002C605C /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		11245E1F1CD0A417002C605C /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		11245E211CD0AED6002C605C /* UIButton+CenterImageAndTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CenterImageAndTitle.h"; sourceTree = "<group>"; };
+		11245E221CD0AED6002C605C /* UIButton+CenterImageAndTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CenterImageAndTitle.m"; sourceTree = "<group>"; };
+		11245E241CD0B042002C605C /* microphone1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone1@2x.png"; sourceTree = "<group>"; };
+		11245E251CD0B042002C605C /* microphone1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone1@3x.png"; sourceTree = "<group>"; };
+		11245E351CD0BD6B002C605C /* HToolVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HToolVoice.h; sourceTree = "<group>"; };
+		11245E361CD0BD6B002C605C /* HToolVoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HToolVoice.m; sourceTree = "<group>"; };
 		116376FF1CCF8C9A0008FB7E /* SpeakForTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakForTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116377031CCF8C9A0008FB7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		116377051CCF8C9A0008FB7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +184,8 @@
 				11245D751CD05E13002C605C /* IATViewController.h */,
 				11245D761CD05E13002C605C /* IATViewController.m */,
 				11245D771CD05E13002C605C /* IATViewController.xib */,
+				11245E351CD0BD6B002C605C /* HToolVoice.h */,
+				11245E361CD0BD6B002C605C /* HToolVoice.m */,
 				11245D781CD05E13002C605C /* ISRDataHelper.h */,
 				11245D791CD05E13002C605C /* ISRDataHelper.m */,
 			);
@@ -244,10 +259,16 @@
 			isa = PBXGroup;
 			children = (
 				11245D671CD05E13002C605C /* HJQVoice */,
+				11245E241CD0B042002C605C /* microphone1@2x.png */,
+				11245E251CD0B042002C605C /* microphone1@3x.png */,
 				116377051CCF8C9A0008FB7E /* AppDelegate.h */,
 				116377061CCF8C9A0008FB7E /* AppDelegate.m */,
 				116377081CCF8C9A0008FB7E /* ViewController.h */,
 				116377091CCF8C9A0008FB7E /* ViewController.m */,
+				11245E1E1CD0A417002C605C /* MyViewController.h */,
+				11245E1F1CD0A417002C605C /* MyViewController.m */,
+				11245E211CD0AED6002C605C /* UIButton+CenterImageAndTitle.h */,
+				11245E221CD0AED6002C605C /* UIButton+CenterImageAndTitle.m */,
 				1163770B1CCF8C9A0008FB7E /* Main.storyboard */,
 				1163770E1CCF8C9A0008FB7E /* Assets.xcassets */,
 				116377101CCF8C9A0008FB7E /* LaunchScreen.storyboard */,
@@ -388,8 +409,10 @@
 			files = (
 				116377121CCF8C9A0008FB7E /* LaunchScreen.storyboard in Resources */,
 				11245DAF1CD05E13002C605C /* client@3x.png in Resources */,
+				11245E261CD0B042002C605C /* microphone1@2x.png in Resources */,
 				11245DB31CD05E13002C605C /* searchVoice@3x.png in Resources */,
 				11245DB41CD05E13002C605C /* speck@2x.png in Resources */,
+				11245E271CD0B042002C605C /* microphone1@3x.png in Resources */,
 				11245DB01CD05E13002C605C /* Oval@2x.png in Resources */,
 				11245DAD1CD05E13002C605C /* cancleButton@3x.png in Resources */,
 				1163770F1CCF8C9A0008FB7E /* Assets.xcassets in Resources */,
@@ -426,7 +449,10 @@
 			files = (
 				11245DA21CD05E13002C605C /* ISRDataHelper.m in Sources */,
 				1163770A1CCF8C9A0008FB7E /* ViewController.m in Sources */,
+				11245E201CD0A417002C605C /* MyViewController.m in Sources */,
+				11245E371CD0BD6B002C605C /* HToolVoice.m in Sources */,
 				11245DA41CD05E13002C605C /* PopupView.m in Sources */,
+				11245E231CD0AED6002C605C /* UIButton+CenterImageAndTitle.m in Sources */,
 				116377071CCF8C9A0008FB7E /* AppDelegate.m in Sources */,
 				11245D9F1CD05E13002C605C /* IATConfig.m in Sources */,
 				11245DA01CD05E13002C605C /* IATViewController.m in Sources */,

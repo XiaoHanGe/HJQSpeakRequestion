@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2et-Op-1QH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pbn-iG-bK7">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -32,7 +32,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1331" y="362"/>
+            <point key="canvasLocation" x="861" y="362"/>
+        </scene>
+        <!--My View Controller-->
+        <scene sceneID="kCm-xw-42h">
+            <objects>
+                <viewController id="pbn-iG-bK7" customClass="MyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MSB-wA-JNC"/>
+                        <viewControllerLayoutGuide type="bottom" id="hbp-RZ-a6h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1J5-Hf-BB8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECV-TZ-zzh">
+                                <rect key="frame" x="27" y="128" width="266" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gU5-dF-jVA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ECV-TZ-zzh" firstAttribute="leading" secondItem="1J5-Hf-BB8" secondAttribute="leading" constant="27" id="SUQ-wl-ZjQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ECV-TZ-zzh" secondAttribute="trailing" constant="27" id="iMA-NL-8Vy"/>
+                            <constraint firstItem="ECV-TZ-zzh" firstAttribute="top" secondItem="MSB-wA-JNC" secondAttribute="bottom" constant="108" id="ypV-Vk-5kx"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myTextField" destination="ECV-TZ-zzh" id="Hbh-KG-5CG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjh-g3-wqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359" y="371"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="42z-Vc-C0v">
@@ -51,7 +89,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3V-oz-q8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="362"/>
+            <point key="canvasLocation" x="469" y="362"/>
         </scene>
     </scenes>
 </document>

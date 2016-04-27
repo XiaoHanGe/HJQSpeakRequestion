@@ -55,7 +55,7 @@
         _textLabel.textColor = [UIColor blueColor];
         
         _textLabel.textAlignment = ALIGN_CENTER;
-        _textLabel.backgroundColor = [UIColor whiteColor];
+        _textLabel.backgroundColor = [UIColor greenColor];
         _textLabel.textAlignment = ALIGN_CENTER;
         [self addSubview:_textLabel];
         _queueCount = 0;

@@ -12,6 +12,7 @@
 #import "PopupView.h"
 #import "ISRDataHelper.h"
 #import "IATConfig.h"
+#import "UIButton+CenterImageAndTitle.h"
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -84,6 +85,9 @@
     _pcmFilePath = [[NSString alloc] initWithFormat:@"%@",[cachePath stringByAppendingPathComponent:@"asr.pcm"]];
 }
 
+
+
+
 #pragma mark ------ 关于按钮操作的一些事情-------
 - (void)holdDownButtonTouchDown {
 
@@ -95,7 +99,7 @@
     
     // 开始说话
     [self startBtnHandler];
-  
+
     // "按住说话－松开搜索"提示
     [voiceImageStr removeFromSuperview];
     voiceImageStr = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth/2 - 40, kScreenHeight - 170, 80, 33)];
